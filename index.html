@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="import" href="https://fonts.google.com/specimen/Ubuntu">
+  <script src="script.js"></script>
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+       
+    <div class="box">
+      
+  <!-- Sidebar start -->
+
+  <div class="side_bar">
+    <p class="sb1 sba" onclick="stepOne()"> <span class="ab1_1 ab1_a" style="background-color:rgb(191, 247, 247); color: black;">1</span> <span class="aldis"> step 1 <br><span class="urinfo stps">your info</span></span></p>
+    <p class="sb2 sba" onclick="stepTwo()"> <span class="ab2_2 ab1_a" >2 </span> <span class="aldis">step 2 <br><span class="seplan stps">select plan</span></span></p>
+    <p class="sb3 sba" onclick="stepThree()"> <span class="ab3_3 ab1_a">3</span> <span class="aldis">step 3 <br><span class="adons stps">add-ons</span></span></p>
+    <p class="sb4 sba" onclick="stepFour()"> <span class="ab4_4 ab1_a">4 </span> <span class="aldis">step 4 <br><span class="sumury stps">summary</span></span></p>
+</div>
+
+<div class="side_bar side_bar2" style="display:none;">
+    <p class="sb1 sba" onclick="alert('Opps! you have already sent the form');"> <span class="ab1_1 ab1_a" >1</span> <span class="aldis"> step 1 <br><span class="urinfo stps">your info</span></span></p>
+    <p class="sb2 sba" onclick="alert('Opps! you have already sent the form');"> <span class="ab2_2 ab1_a" >2 </span> <span class="aldis">step 2 <br><span class="seplan stps">select plan</span></span></p>
+    <p class="sb3 sba" onclick="alert('Opps! you have already sent the form');"> <span class="ab3_3 ab1_a">3</span> <span class="aldis">step 3 <br><span class="adons stps">add-ons</span></span></p>
+    <p class="sb4 sba" onclick="alert('Opps! you have already sent the form');"> <span class="ab4_4 ab1_a" style="background-color:rgb(191, 247, 247); color: black;">4 </span> <span class="aldis">step 4 <br><span class="sumury stps">summary</span></span></p>
+</div>
+
+
+
+  <!-- Sidebar end -->
+  <div class="displayed_data_cov">
+<div class="dispayed_data">
+  <!-- Step 1 start -->
+
+   <div class="displayed_data1">
+    <p class="title">Personal info</p>
+    <p class="intro">Please provide your name, email address, and phone number.</p>
+    
+    <form  id="theForm" action="Step5.html" method="post">
+        <label for="name" style="font-size: 0.8em; font-weight: 600; color: rgba(8, 8, 49, 0.732)">Name <span class="onErr onErr1">This field is required</span></label><br>
+        <input type="text" class="name_fld" id="name" placeholder="e.g. Stephen King" required><br>
+        <label for="email" style="font-size: 0.8em; font-weight: 600; color: rgba(7, 7, 45, 0.732)">Email Address <span class="onErr onErr2">This field is required</span></label><br>
+        <input type="email"  class="email_fld" id="email" placeholder="e.g. stephenking@lorem.com
+        " required><br>
+        <label for="pnumer" style="font-size: 0.8em; font-weight: 600; color: rgba(7, 7, 48, 0.732);">Phone Number <span class="onErr onErr3">This field is required</span></label><br>
+        <input type="tel" class="pnumer_fld" id="pnumer" placeholder="e.g. +1 234 567 890" required>
+
+       
+    </form>
+    
+</div>
+
+  <!-- Step 1 end -->
+
+  <!-- Step 2 start -->
+
+  <div class="displayed_data2">
+
+    <p class="title">Select your plan</p>
+    <p class="intro">You have the option of monthly or yearly billing.</p>
+       
+    <div class="plans">
+        <a class="arx" onclick="selectPlanA()">
+            <img src="images/icon-arcade.svg" alt="Arcade image">
+            <p class="plan_type">Arcade <br>
+              <span class="plan_type_cost  plan_type_cost1">$9/mo</span>
+               <span class="plan_type_cost  plan_type_cost2">$90/yr <br></span>
+               <span style="font-size: 12px;" class="fmri">2 months free</span></p>
+        </a>
+
+        <a class="adv" onclick="selectPlanB()">
+            <img src="images/icon-advanced.svg" alt="Advanced image">
+            <p class="plan_type">Advanced <br>
+              <span class="plan_type_cost  plan_type_cost1_B">$12/mo</span>
+              <span class="plan_type_cost  plan_type_cost2_B">$120/yr <br></span>
+              <span style="font-size: 12px;" class="fmriB">2 months free</span></p>
+       
+            </a>
+
+        <a class="pro" onclick="selectPlanC()">
+            <img src="images/icon-pro.svg" alt="Pro image">
+            <p class="plan_type">Pro<br>
+              <span class="plan_type_cost  plan_type_cost1_C">$15/mo</span>
+              <span class="plan_type_cost  plan_type_cost2_C">$150/yr <br></span>
+              <span style="font-size: 12px;" class="fmriC">2 months free</span></p>
+        </a>
+    </div>
+    <div class="monthly_yearly"><p><span class="monthly" onclick="document.getElementById('picA').style.margin = '0 20px 0 0';  monthly();">Monthly</span><span class="monthly_yearly_picker" id="picB" ><span  class="month_year_circle" id="picA"></span></span><span class="yearly" onclick="document.getElementById('picA').style.margin = '0 0 0 20px'; yearly();">Yearly</span></p></div>
+    
+  </div>
+<!-- Step 2 end -->
+
+<!-- Step 3 start -->
+<div class="displayed_data3" >
+
+  <p class="title">Pick add-ons</p>
+  <p class="intro">Add-ons help enhance your gaming experience</p>
+
+  <div class="adons">
+    <div class="on_ser ons" onclick="pick_adons1()">
+      <div class="checkbox-an-p">
+      <input type="checkbox" class="chbx " id="chbx1">
+      <p class="adons_product">Online service <br> <span class="ons_detail">Access to multiplayer games</span></p>
+    </div>
+    <p class="adons-cost"><span class="monly">+$1/mo</span><span class="yly">+$10/yr</span></p>
+    </div>
+
+    <div class="lar_stor ons" onclick="pick_adons2()">
+     <div class="checkbox-an-p">
+      <input type="checkbox" class="chbx " id="chbx2">
+      <p class="adons_product">Largest storage <br> <span class="ons_detail">Extra 1TB of cloud save</span></p>
+    </div>
+    <p class="adons-cost"><span class="monlyB">+$2/mo</span><span class="ylyB">+$20/yr</span></p>
+    </div>
+
+    <div class="cust_pro ons" >
+      <div class="checkbox-an-p">
+        <input type="checkbox" class="chbx" id="chbx3" onclick="pick_adons3()">
+        <p class="adons_product">Customizable profile <br> <span class="ons_detail">Custom themes on your profile</span></p>
+      </div>
+      <p class="adons-cost"><span class="monlyC">+$2/mo</span><span class="ylyC">+$20/yr</span></p>
+
+    </div>
+  </div>
+ 
+</div>
+
+  <!-- Step 3 end -->
+
+  <!-- Step 4 starts -->
+  <div class="displayed_data4" >
+
+    <p class="title">Finishing up</p>
+    <p class="intro">Double-check everything looks OK before confirming.</p>
+  
+    <div class="finishing_up">
+    
+      <p class="setd_plan_place"><span class="setd_plan">Select Plan</span> ( <span class="timly"></span> )    <span class="setd_plan_cost_place"> $<span class="setd_plan_cost">0</span>/<span class="which_per"></span></span>  </p>
+      <p class="change_setds" onclick="stepTwo()">Change</p>
+      <hr>
+      <p class="setd_ons_place setd_ons_place1"><span class="setd_ons1"></span> <span class="setd_ons_cost_place">+$<span class="setd_ons1_cost"></span>/<span class="which_per1"></span></span></p>
+      <p class="setd_ons_place setd_ons_place2"><span class="setd_ons2"></span> <span class="setd_ons_cost_place">+$<span class="setd_ons2_cost"></span>/<span class="which_per2"></span></span></p>
+      <p class="setd_ons_place setd_ons_place3"><span class="setd_ons3"></span> <span class="setd_ons_cost_place">+$<span class="setd_ons3_cost"></span>/<span class="which_per3"></span></span></p>
+
+
+    </div>
+    <p class="total_per">Total (per <span class="per_typ"></span> ) <span class="ttl_cost_place">$<span class="ttl_cost">0</span>/<span class="which_per4"></span></span></p>
+
+    </div>
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 starts -->
+
+  <div class="displayed_data5" >
+   
+    <div class="displayed_data5_content">
+     <img src="imagesicon-thank-you.svg" alt="" class="right_sign">
+     <p class="tnqs">Thank you!</p>
+      <p class="tnq_message">Thanks for confirming your subscription! We hope you have <br>fun
+      using our platform. If you ever need support, please feel <br>free
+      to email us at support@loremgaming.com.
+    </p>
+
+  </div>
+  </div>
+
+
+  <!-- Step 5 end -->
+
+ 
+
+</div><br>
+<div class="btns">
+    <button class="btn_back btn_back2" onclick="stepOne()">Go Back</button>
+    <button class="btn_back btn_back3" onclick="stepTwo()">Go Back</button>
+    <button class="btn_back btn_back4" onclick="stepThree()">Go Back</button>
+<button onclick="stepTwo()"  class="nxtbtn nxtbtn1" >Next Step</button>
+<button  onclick="stepThree()"  class="nxtbtn nxtbtn2">Next Step</button>
+<button  onclick="stepFour()"  class="nxtbtn nxtbtn3">Next Step</button>
+<button  onclick="stepFive()"  class="nxtbtn nxtbtn4" style="background-color: blue;"  >Confirm</button>
+</div>
+</div>
+
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Henok225">Henok Zena</a>.
+  </div>
+
+  
+</body>
+</html>

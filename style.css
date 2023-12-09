@@ -1,0 +1,473 @@
+
+body{
+    background-color: rgba(176, 229, 246, 0.392);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+   padding-bottom: 10px;
+}
+.box{
+    box-sizing: content-box;
+    background-color: white;
+    margin: 100px 15%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+.side_bar{
+    margin-right: 100px;
+    padding: 35px 0px 0 25px;
+    background-image: url("images/sd_back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 274px;
+    height: 554px;
+    border-radius: 10px;
+}
+.ab1_a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 1.1em;
+    border: 2px solid rgb(191, 247, 247);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+    padding: 0;
+    float: left;
+    font-weight: 500;
+    cursor: pointer;
+}
+.sba{
+color: rgb(171, 170, 170);
+text-transform: uppercase;
+font-size: small;
+margin-bottom:30px ;
+}
+.stps{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.stps:hover{
+    cursor:pointer;
+}
+.title{
+    color: rgba(16, 7, 53, 0.801);
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+/*Step one styling starts here*/
+.intro{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: rgba(171, 170, 170, 0.83);
+    font-weight: 400;
+}
+
+input{
+    margin-right: 0;
+    width: 87%;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid rgba(205, 201, 201, 0.607);
+
+}
+input::placeholder{
+    opacity: 0.4;
+}
+input:hover{
+    border-color: rgb(68, 160, 231);
+    cursor: pointer;
+}
+.onErr{
+    color: red;
+    float: right;
+    display: none;
+}
+
+/*Step one styling ends here*/
+
+/*Step two styling starts here*/
+.plans{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.plans a{
+    padding: 20px;
+    padding-bottom: 0;
+    text-decoration: none;
+    border: 2px solid rgba(192, 192, 192, 0.434);
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px;
+    color:rgba(16, 7, 53, 0.801);
+    font-weight: 700;
+}
+.plans a:hover{
+    cursor: pointer;
+}
+.plans a img{
+    margin-bottom: 25px;
+}
+.plans a:click{
+    border-color: rgb(79, 84, 232);
+}
+ .plan_type_cost{
+    font-size: small;
+    font-weight: 600;
+    color: rgba(152, 150, 150, 0.696);
+}
+.monthly_yearly{
+    border: 1px solid lightblue;
+    margin: 20px;
+    padding:1px 10px;
+    border-radius: 10px;
+    background-color: rgb(243, 251, 255);
+    border: none;
+    text-align: center;
+    margin-left: 10px;
+}
+.monthly{
+color: rgb(181, 177, 177);
+font-weight: 600;
+}
+.monthly,.yearly:hover{
+    cursor: pointer;
+}
+.yearly{
+    font-weight: 600;
+}
+.monthly_yearly_picker{
+    font-size: 10px;
+    padding: 4px;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0 25px;
+}
+.month_year_circle{
+    font-size: 10px;
+    width: 2px;
+    height: 3px;
+    padding: 0px 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0  20px 0 0;
+    transition: 0.5s;
+}
+.plan_type_cost2,.plan_type_cost2_B,.plan_type_cost2_C,.fmri,.fmriB,.fmriC{
+    display: none;
+}
+
+/*Step two styling ends here*/
+
+
+/*Step three styling starts here*/
+
+.adons{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 30px;
+    padding-right: 15px;
+    margin-left: 0;
+}
+.ons{
+    display: flex;
+    justify-content:space-between;
+    border: 2px solid rgba(205, 201, 201, 0.607);
+    margin: 10px;
+    width:470px;
+    padding: 0 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+.ons:hover{
+    border-color: blue;
+}
+.chbx{
+    width: 20px;
+    margin-left: 0;
+    margin-right: 15px;
+    padding: 0;
+}
+.checkbox-an-p{
+    display: flex;
+    justify-content: flex-start;
+    margin-right:0px;
+}
+.ons_detail{
+    font-size: small;
+    font-weight: 400;
+    color: rgba(152, 150, 150, 0.923);
+}
+.adons-cost{
+    color: rgb(122, 9, 227);
+    font-size: small;
+    margin-top: 25px;
+}
+.yly,.ylyB,.ylyC{
+    display: none;
+}
+.adons_product{
+    font-weight: 600;
+}
+/*Step three styling ends here*/
+
+/* Step four styling starts here */
+
+.finishing_up{
+    background-color: rgba(98, 67, 237, 0.033);
+    padding:20px;
+    border-radius: 10px;
+}
+.setd_plan_place{
+    color: rgb(2, 2, 45);
+    font-weight: 800;
+    font-size: 1.1em;
+    width: 470px;
+}
+.setd_plan_cost_place{
+    float: right;
+}
+.change_setds{
+    color: rgba(171, 170, 170, 0.83);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.setd_ons_place{
+    color: rgba(171, 170, 170, 0.83);
+}
+.setd_ons_cost_place{
+    float: right;
+    color:rgb(2, 2, 39) ;
+    font-size: small;
+    font-weight: 600;
+}
+.ttl_cost_place{
+    float: right;
+    color: blue;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+.total_per{
+    padding: 20px;
+    color: rgba(171, 170, 170, 0.83);
+
+}
+/* Step four styling ends here */
+
+/*step five styling starts here*/
+
+.dispayed_data5_contents{
+    text-align: center;
+}
+.displayed_data5{
+    display: none;
+    text-align: center;
+    margin:150px 15px;
+    flex-wrap:wrap ;
+}
+.tnq_message{
+    color: rgba(171, 170, 170, 0.977);
+    margin-top: 0;
+   
+}
+.tnqs{
+    color: rgba(16, 7, 53, 0.801);
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+/*step five styling ends here*/
+
+.nxtbtn{
+    background-color: rgb(2, 2, 86);
+    color: whitesmoke;
+    width: 100px;
+    padding: 11px;
+    border-radius: 6px;
+    margin:20px;
+    border: none;
+    cursor: pointer;
+}
+.nxtbtn:hover{
+    background-color: rgba(2, 2, 86, 0.678);
+}
+.btn_back{
+    border: none;
+    background-color: white;
+    color: rgb(161, 156, 156);
+    margin: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    margin-right: 60px;
+}
+.btn_back:hover{
+    color:rgb(2, 2, 86) ;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top:55px;
+    margin-bottom: 0;
+}
+.nxtbtn2,.nxtbtn3,.nxtbtn4{
+    display: none;
+}
+.nxtbtn1{
+    margin-left: 400px;
+}
+.dispayed_data_cov{
+    margin: 0;
+    padding: 0;
+}
+.displayed_data2{
+    display:none;
+}
+.displayed_data3{
+    display:none;
+}.displayed_data4{
+    display:none;
+}
+
+/* The responsive design starts here*/
+
+@media screen and (max-width:600px) {
+    body{
+        background-color:whitesmoke;
+        margin: 0;
+    }
+    .btns{
+        display: flex;
+        justify-content: space-between;
+        margin-top:0px ;
+        margin-bottom: 0;  
+    }
+    .side_bar{
+        margin: 0;
+        padding: 25px 0px 0 0px;
+        background-image: url("mbd_back.png");
+        background-color: rgb(231, 241, 251);
+        width: 100%;
+        height: 680px;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .ab1_a{
+        margin: 10px;
+        
+    }
+        .aldis{
+            display: none;
+        }
+        .box{
+            padding: 0 0 20px 0;
+            margin: 0;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-radius: 15px;
+            flex-wrap: wrap;
+            height: 100%;
+        }  
+        .dispayed_data{
+           margin: 20px;
+           padding: 0px 10px 0 20px;
+           position: absolute;
+           top: 15%;
+           left: 5px;
+           right: 5px;
+           border-radius: 10px;
+           background-color:#ffffff;
+        }
+        .title{
+            margin: 30px 0 15px 0;
+        }
+        .intro{
+            margin: 15px;
+        }
+        input{
+            font-size: 0.8em;
+            padding: 13px;
+            border-radius: 5px;
+        }
+        .nxtbtn{
+            position: inherit;
+            bottom: 0;
+            right: 0;
+        }
+        .nxtbtn1{
+           margin-left: 65%;
+        }
+        .plans{
+            flex-direction: column;
+        }
+        .plans a{
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px;
+            position: relative;
+           width:80%;
+        }
+        .plans a img{
+            margin: 0 10px;
+        }
+        .ons{
+            width: 100%;
+        }
+        .setd_plan_place{
+            width: 100%;
+        }
+        .displayed_data5{
+            margin: 50px 5px;
+        }
+}
+
+@media screen and (min-width:600px) {
+.side_bar{
+    background-size: cover;
+    width:100%;
+    height: auto;
+}
+.setd_plan_place{
+    width: 100%;
+}
+.box{
+    flex-wrap: wrap;
+}
+
+}
+
+@media screen and (min-width:1300px) {
+    .side_bar{
+        margin-right: 100px;
+        padding: 35px 0px 0 25px;
+        background-image: url("images/sd_back.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 274px;
+        height: 554px;
+        border-radius: 10px;
+    }
+    .setd_plan_place{
+        width: 470px;
+    }
+    
+    }
