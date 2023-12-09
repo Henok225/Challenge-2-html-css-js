@@ -360,7 +360,7 @@ font-weight: 600;
     .side_bar{
         margin: 0;
         padding: 25px 0px 0 0px;
-        background-image: url("mbd_back.png");
+        background-image: url("images/mbd_back.png");
         background-color: rgb(231, 241, 251);
         width: 100%;
         height: 680px;
